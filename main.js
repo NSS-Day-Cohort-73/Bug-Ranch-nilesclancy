@@ -32,7 +32,7 @@ for (const drover of drovers) {
     console.log(`\t* ${drover.first_name} ${drover.last_name}`)
 }
 
-console.log("\n\nYour journey will take you through the wildness of the American Midwest and across the following terrain")
+console.log("\n\nYour journey will take you through the wilderness of the American Midwest and across the following terrain")
 for (const area of journey) {
     console.log(`\t* ${area}`)
 }
