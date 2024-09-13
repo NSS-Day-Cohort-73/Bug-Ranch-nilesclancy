@@ -9,8 +9,9 @@ const roundup = (herdSize) => {
         const animal = types[randomType]
         cattle.push(animal)
     }
-
+    
     return cattle
+
 }
 
 module.exports = { roundup }

@@ -77,8 +77,10 @@ Your journey will take you through the wildness of the American Midwest and acro
 
 1. In the **main** module, one of the first lines of code is `const drovers = hireDrovers(cattleToDrive)`. Explain what the value of the `drovers` variable is when that line of code runs.
    > // When the above line of code runs, the value of the `drovers` variable is set as `undefined` in the debugger's variables section. `drovers` has no value other then "undefined" until line 5 of drovers.js, when "database.drovers" is assigned to allDrovers.
+   // New Ans: The `drovers` variable is the return value of the `hireDrovers()`function, and its datatype is an array.
 2. At the bottom of the main module, you will see the following code - `for (const drover of drovers)`. Explain what the values of both the `drover` and the `drovers` variables are.
    > // Ideally the values of `drover` and `drovers` will be the local variable used to iterate through each element of the drovers array, and the actual array of drovers respectively. In the debugger, one can see that as the line is executed, drover is `undefined` and `drovers` has the 0-4 index positions full of random drovers from the list. on line 32 of main.js, the drover element is defined with the id of the "0th" -- or first -- element in the drovers index.
+   // New Ans: the `drover` variable describes each object of the `drovers` array (with individual properties ascribed to each object), and the `drovers` variable an array, which is also the return value of the `hireDrovers()` function.
 3. In the **journey** module, there is a `journeyMaker()` function. In that function, there is a variable named `areas` which will have the value of an object. Use your debugger to show what the value of each key is on that object. Use [Loom](https://www.loom.com) to record your session.
    > Your public Loom URL here: https://www.loom.com/share/c8d1c02c85b74c9fa13436ea7ed6a4ce
 4. Also in the **journey** module, there is the following code:
@@ -88,11 +90,14 @@ Your journey will take you through the wildness of the American Midwest and acro
    }
    ```
    Explain this code with your best vocabulary.
-   > // These lines of code are resposible for iterating through the set terrain of forests. forestNumber is a local variable that is assigned to zero to indicate no forests in the journey until the forest property is assigned to the areas (as done in areas.forests). Then forestNumber++ adds to the number of forests shown in the debugger for each area type as the code progresses through each for loop of journeyMaker.
+   > // These lines of code are responsible for iterating through the set terrain of forests. forestNumber is a local variable that is assigned to zero to indicate no forests in the journey until the forest property is assigned to the areas (as done in areas.forests). Then forestNumber++ adds to the number of forests shown in the debugger for each area type as the code progresses through each for loop of journeyMaker.
+   // New Ans: This is a is a for loop iterator containing a local variable of the number datatype `forestNumber` (which is the return value of the `createForest()` function, and serves as a counter), a conditional `<`-- that restricts the quantity of "forest" pushes into the `journey` array to the number of forest areas (area is an object under which forests is a property)(`areas.forests` also uses dot notation to call the forests property of the areas object), and `forestNumber++` which is an incrementing statement utilizing the `forestNumber`variable to increase the counter as the loop runs.
 5. Explain the value of the `database` variable in the **database** module. Be as comprehensive as possible.
    > // the `database` variable is what the indexes of cattleTypes and drovers are assigned to. Later on in the cattle.js and drovers.js files, the database variable is called with dot notation to transfer the section of the database needed (whether it's drovers or cattleTypes) into the methods of the aforementioned modules that produce the final lists funneled back into main.js.
+   // New Ans: the `database` variable is a object, assigned to the `drovers` and `cattleTypes` arrays, each with their own variety of objects with multiple properties.
 6. In the **drovers** module, there is a `hireDrovers()` function. You will notice the following code on that line - `(herdSize)`. What is that defining, and where does it get its value?
    > // The `(herdSize)` parameter is passed into the `hireDrovers()` function to use in comparison with the final cattle[] array to make sure that the number of drovers passed on to main.js is one tenth of the number of cattle rounded up (because the number of drovers must remain an integer and not a float). This means that the `(herdSize)` parameter's value is the number of animals pushed to the cattle[] array by the `hireDrovers()` function.
+   // New Ans: the `(herdSize)` parameter of the `hireDrovers()` function is a number defining the amount of animal objects in the cattle array. It gets its value from the `(cattleToDrive)` argument on line 6 of main.js, which is defined as a number on line 5 of the same module.
 
 ## When You Are Done
 
